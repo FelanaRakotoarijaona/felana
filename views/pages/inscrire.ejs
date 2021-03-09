@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tongasoa </h1>
+    <form action="/creer" method="POST">
+        <label for="nom">Nom:</label><br>
+        <input type="text" id="nom" name="nom"><br>
+        <label for="prenom">Prenom:</label><br>
+        <input type="text" id="prenom" name="prenom"><br><br>
+        <label for="categorie">Catégorie:</label>
+        <select id="categorie" name="categorie">
+            <option value="prod1">Prod 1</option>
+            <option value="prod2">Prod 2</option>
+            <option value="prod3">Prod 3</option>
+            <option value="prod4">Prod 4</option>
+            <option value="trans">Trans</option>
+        </select><br><br>
+    <button type="submit" class="pure-button pure-button-primary">Créer</button>
+
+      </form>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>   
+  
+ 
+<script>
+    $(document).ready(function() {
+            $('#example').DataTable();
+        });
+
+</script>
+</html>

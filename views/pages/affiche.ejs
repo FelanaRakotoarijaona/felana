@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <br>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nom</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">Catégorie</th>
+            <th>Modifier</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <% for (var i = 0; i < medecin.length; i++){ %>
+                <tr>
+                    <td><%= medecin[i].nom %></td>
+                    <td><%= medecin[i].prenom %></td>
+                    <td><%= medecin[i].categorie %></td>
+                    <td>
+                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal"  onclick="recup()">Modifier</button>
+                        <!-- Modal -->
+                        <div id="myModal" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Modal Header</h4>
+                            </div>
+                            <div class="modal-body">
+                                <input type="text" id="nom">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                            </div>
+
+                        </div>
+                        </div>
+                    </td>
+                </tr>
+                <%
+                     }
+                        %>
+          </tr>
+        </tbody>
+      </table>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>   
+  
+ 
+<script>
+   
+   
+   function recup(){
+        $('#myModal').modal();
+        $('#nom').val('Rakoto');
+
+        }
+        
+</script>
+</html>
